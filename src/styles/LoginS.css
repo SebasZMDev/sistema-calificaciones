@@ -67,4 +67,11 @@
   .login-button:hover {
     background-color: #0056b3;
   }
-  
+
+  .login-olvidaste {
+    color: blue;
+    padding-bottom: 10px;
+    text-align: center;
+    font-family: "Nunito", serif;
+    cursor: pointer;
+  }

@@ -1,5 +1,9 @@
+import NavBar from "../components/NavBar";
+
 const Curso = () => {
-    return <h1>Curso Page</h1>;
+    return (
+        <NavBar/>
+    );
 };
 
 export default Curso;
