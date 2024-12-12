@@ -52,3 +52,48 @@ body {
 .curso.quimica {
     border-left: 5px solid #9c27b0;
 }
+
+
+.rol-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #e0f7fa, #ffffff);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    border: 2px solid #4fc3f7;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Efecto Hover */
+.rol-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Título */
+.rol-title {
+    font-size: 1.8em;
+    font-family: "Poppins", sans-serif;
+    color: #00796b;
+    margin: 0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease-in-out;
+}
+
+
+.rol-container:hover .rol-title {
+    color: #004d40;
+}
+
+
+
+.rol-container::after {
+    top: auto;
+    bottom: 0;
+    transform: translateY(50%);
+}
