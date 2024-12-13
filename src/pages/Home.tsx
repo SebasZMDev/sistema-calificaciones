@@ -23,6 +23,11 @@ const Home = () => {
       const toCursoList = () => {
         navigate('/pages/CursoList')
       }
+
+      const toSecciones = () => {
+        navigate('/pages/Secciones')
+      }
+
   return (
     <div>
       <NavBar />
@@ -33,7 +38,7 @@ const Home = () => {
       </div>
       ):(
         <div className="rol-container">
-          <h4 className="rol-title">Envio de Libretas</h4>
+          <h4 className="rol-title" onClick={toSecciones}>Envio de Libretas</h4>
         </div>
       )}
     </div>

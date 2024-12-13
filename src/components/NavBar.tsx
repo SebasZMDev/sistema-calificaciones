@@ -24,13 +24,14 @@ const NavBar = () => {
         }
       }, [nombre, rol]);
 
-    const IrACurso = () => {
-        navigate('/pages/Curso')
-    }
+
+    const IrAHome = () => {
+      navigate('/pages/Home')
+  }
 
     return (
         <nav className="nav">
-            <img src="../.././public/media/logo.png" className="nav-logo" onClick={()=>IrACurso}/>
+            <img src="../.././public/media/logo.png" className="nav-logo" onClick={IrAHome}/>
             <div style={{textAlign: "end"}}>
             <h3>Bienvenido <span style={{color:"blue"}}>{rol}</span> <span style={{color:"green", fontWeight:"800"}}>{nombre}</span></h3>
         </div>
