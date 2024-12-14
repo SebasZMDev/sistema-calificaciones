@@ -1,42 +1,44 @@
 import { useNavigate } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import "../styles/SeccionesS.css";
+import { useState } from "react";
 
 const Secciones = () => {
   const navigate = useNavigate();
-  const IrASeccion = () => {
+  const IrASeccion = (value:string) => {
     navigate("/pages/EstaSeccion");
+    localStorage.setItem("grado", JSON.stringify(value));
   };
 
   return (
     <div>
       <NavBar />
       <div className="scc-container">
-        <div className="scc-section" onClick={IrASeccion}>
+      <div className="scc-section" onClick={() => { IrASeccion("1")}}>
           <h2 className="scc-heading">Sección 1</h2>
           <p className="scc-paragraph">Salón: 101</p>
           <p className="scc-paragraph">Grado: 1° Primaria</p>
         </div>
 
-        <div className="scc-section" onClick={IrASeccion}>
+        <div className="scc-section" onClick={() => { IrASeccion("2")}}>
           <h2 className="scc-heading">Sección 2</h2>
           <p className="scc-paragraph">Salón: 102</p>
           <p className="scc-paragraph">Grado: 2° Primaria</p>
         </div>
 
-        <div className="scc-section" onClick={IrASeccion}>
+        <div className="scc-section" onClick={() => { IrASeccion("3")}}>
           <h2 className="scc-heading">Sección 3</h2>
           <p className="scc-paragraph">Salón: 103</p>
           <p className="scc-paragraph">Grado: 3° Primaria</p>
         </div>
 
-        <div className="scc-section" onClick={IrASeccion}>
+        <div className="scc-section" onClick={() => { IrASeccion("4")}}>
           <h2 className="scc-heading">Sección 4</h2>
           <p className="scc-paragraph">Salón: 104</p>
           <p className="scc-paragraph">Grado: 4° Primaria</p>
         </div>
 
-        <div className="scc-section" onClick={IrASeccion}>
+        <div className="scc-section" onClick={() => { IrASeccion("5")}}>
           <h2 className="scc-heading">Sección 5</h2>
           <p className="scc-paragraph">Salón: 105</p>
           <p className="scc-paragraph">Grado: 5° Primaria</p>

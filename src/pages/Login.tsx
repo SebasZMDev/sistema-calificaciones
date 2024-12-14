@@ -11,13 +11,35 @@ const Login = () => {
   const [saul, setSaul] = useState(false)
   const [errorMsg, setErrorMsg] = useState('');
   const [olvidaste, setOlvidaste] = useState(false);
-   const userInputChangue = (e:React.ChangeEvent<HTMLInputElement>) => {
+
+  const usuarios = []
+
+  const userInputChangue = (e:React.ChangeEvent<HTMLInputElement>) => {
     setUserInput(e.target.value);
   }
 
   const passwordInputChangue = (e:React.ChangeEvent<HTMLInputElement>) => {
     setPasswordInput(e.target.value);
   }
+
+  const Usuarios = [{
+    usuario: "nappan",
+    rol: "docente",
+    password: "contraseña"
+  },{
+    usuario: "nappan",
+    rol: "docente",
+    password: "contraseña"
+  },{
+    usuario: "nappan",
+    rol:"encargado",
+    password: "contraseña"
+  },{
+    usuario: "nappan",
+    rol:"encargado",
+    password: "contraseña"
+  }
+]
 
   const ValidarDatos = () => {
       localStorage.setItem("user", JSON.stringify(userInput));
