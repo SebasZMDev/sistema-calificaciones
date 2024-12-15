@@ -8,6 +8,8 @@ const UserDatos = () => {
     const navigate = useNavigate();
     const [nombre, setNombre] = useState('');
     const [rol, setRol] = useState('');
+    const [infoDocente, setInfoDocente] = useState(false)
+    const [editarDocente, setEditarDocente] = useState(false);
 
     useEffect(() => {
         const nameStorage = localStorage.getItem('user');
@@ -41,10 +43,52 @@ const UserDatos = () => {
             Rol: {rol}
             </h4>
         </div>
-        <button className='ud-btn-logout' onClick={CerrarSesion}>
-          Cerrar Sesion
-        </button>
+        <div style={{width:"80%",display:"grid", gridTemplateColumns:"50% 50%"}}>
+          <button className='ud-btn-logout' onClick={()=>setInfoDocente(true)}>
+            Actualizar Datos
+          </button>
+          <button className='ud-btn-logout' onClick={CerrarSesion}>
+            Cerrar Sesion
+          </button>
+        </div>
       </div>
+      {infoDocente?(
+                <div className='af-general-container'>
+                <div className='af-background'></div>
+                <div className="af-container">
+                    <img src="../.././public/media/default.jpg" alt="Foto del alumno" className="af-foto" />
+                      {editarDocente?
+                      (
+                        <div className="af-info">
+                        <input readOnly style={{fontFamily:"Nunito, serif", fontSize:"1em", marginLeft:"20px"}} value="Alegre Jesus Ninaquiste"/>
+                        <div><span style={{fontFamily:"Nunito, serif", fontSize:"0.8em"}}>Código:</span><input readOnly value="i20236969"/></div>
+                        <div><span style={{fontFamily:"Nunito, serif", fontSize:"0.8em"}}>DNI:</span><input readOnly value="12345678"/></div>
+                        <div><span style={{fontFamily:"Nunito, serif", fontSize:"0.8em"}}>Correo:</span><input readOnly value="soycremacorazon@hotmail.com"/></div>
+                        <div><span style={{fontFamily:"Nunito, serif", fontSize:"0.8em"}}>Numero:</span><input readOnly value="969 969 111"/></div>
+                        <div className="af-actions">
+                           <button className="af-button af-edit"  onClick={()=>setEditarDocente(false)}>Guardar</button>
+                           <button className="af-button af-close" onClick={()=>setInfoDocente(false)}>Cerrar</button>
+                        </div>
+                       </div>
+                      )
+                      :(
+                        <div className="af-info">
+                          <h2>Jesus Alegre Ninaquispe</h2>
+                          <p><strong>Código:</strong> i20236969</p>
+                          <p><strong>DNI:</strong> 12345678</p>
+                          <p><strong>Rol:</strong> C</p>
+                          <p><strong>Correo:</strong> soycremacorazon@hotmail.com</p>
+                          <p><strong>Numero:</strong>969 969 111</p>
+                          <div className="af-actions">
+                             <button className="af-button af-edit"  onClick={()=>setEditarDocente(true)}>Editar</button>
+                             <button className="af-button af-close" onClick={()=>setInfoDocente(false)}>Cerrar</button>
+                          </div>
+                         </div>
+                      )}
+
+                </div>
+            </div>
+      ):(null)}
 </div>
     )
 }

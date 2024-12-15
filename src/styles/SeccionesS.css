@@ -78,3 +78,35 @@
   transform: scale(1.3);
   opacity: 0.3;
 }
+
+
+.sex-container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  gap: 10px;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.sex-select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #ffffff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sex-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+.sex-select option {
+  font-size: 14px;
+}

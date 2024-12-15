@@ -13,6 +13,35 @@ const Secciones = () => {
   return (
     <div>
       <NavBar />
+<div className="sex-container">
+  <select className="sex-select">
+    <option value="">Curso</option>
+    <option value="matematicas">Matemáticas</option>
+    <option value="ciencias">Ciencias</option>
+    <option value="historia">Historia</option>
+    <option value="lenguaje">Lenguaje</option>
+    <option value="arte">Arte</option>
+    <option value="educacion-fisica">Educación Física</option>
+  </select>
+
+  <select className="sex-select">
+    <option value="">Grado</option>
+    <option value="primero">Primero</option>
+    <option value="segundo">Segundo</option>
+    <option value="tercero">Tercero</option>
+    <option value="cuarto">Cuarto</option>
+    <option value="quinto">Quinto</option>
+  </select>
+
+  <select className="sex-select">
+    <option value="">Sección</option>
+    <option value="a">A</option>
+    <option value="b">B</option>
+    <option value="c">C</option>
+  </select>
+</div>
+
+
       <div className="scc-container">
       <div className="scc-section" onClick={() => { IrASeccion("1")}}>
           <h2 className="scc-heading">Sección 1</h2>

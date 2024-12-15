@@ -29,6 +29,7 @@ const Curso = () => {
   return (
     <div>
       <NavBar />
+      <input style={{width:"500px", height:"30px", border:"2px solid black", borderRadius:"10px", marginLeft:"600px"}}></input><button>Buscar Estudiante</button>
       <div id="estudiantes-container">
         <h2>Lista de Estudiantes</h2>
         <table>
@@ -64,7 +65,7 @@ const Curso = () => {
         <div style={{width:"50%", display:"grid", gridTemplateColumns:"33% 33% 33%", margin:"0 auto"}}>
           <button style={{margin:"20px", transform:"scaleY(1.3)", backgroundColor:"skyblue"}} onClick={IrACursoList}>Volver</button>
           {guardado?(<button style={{margin:"20px", backgroundColor:"gray", transform:"scaleY(1.3)"}}>Guardado</button>):(<button style={{margin:"20px", transform:"scaleY(1.3)"}} onClick={()=>setGuardado(true)}>Guardar</button>)}
-          {guardado?(<button style={{margin:"20px", transform:"scaleY(1.3)"}}  onClick={()=>setGuardado(false)}>Editar</button>):(<button style={{margin:"20px", backgroundColor:"gray", transform:"scaleY(1.3)"}}>Guardar</button>)}
+          {guardado?(<button style={{margin:"20px", transform:"scaleY(1.3)"}}  onClick={()=>setGuardado(false)}>Editar</button>):(<button style={{margin:"20px", backgroundColor:"gray", transform:"scaleY(1.3)"}}>Editar</button>)}
         </div>
       </div>
     </div>

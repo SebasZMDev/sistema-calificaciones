@@ -220,7 +220,6 @@ const EstaSeccion = () => {
           <button onClick={IrASecciones}>Volver</button>
           <button onClick={()=>setListado(true)}>Generar Reportes</button>
           <button>Guardar</button>
-          <button>Seleccionar Todo</button>
           <button>Enviar</button>
         </div>
 
@@ -273,23 +272,23 @@ const EstaSeccion = () => {
                       {editarAlumno?
                       (
                         <div className="af-info">
-                        <input style={{fontFamily:"Nunito, serif", fontSize:"1em", marginLeft:"20px"}} value="Alegre Jesus Ninaquiste"/>
-                        <div><span style={{fontFamily:"Nunito, serif", fontSize:"0.8em"}}>Código:</span><input value="i20236969"/></div>
-                        <div><span style={{fontFamily:"Nunito, serif", fontSize:"0.8em"}}>DNI:</span><input value="12345678"/></div>
-                        <div><span style={{fontFamily:"Nunito, serif", fontSize:"0.8em"}}>Nivel:</span><input value="Primaria"/></div>
-                        <div><span style={{fontFamily:"Nunito, serif", fontSize:"0.8em"}}>Grado:</span><input value="3ro"/></div>
-                        <div><span style={{fontFamily:"Nunito, serif", fontSize:"0.8em"}}>Sección:</span><input value="C"/></div>
-                        <div><span style={{fontFamily:"Nunito, serif", fontSize:"0.8em"}}>Apoderado:</span><input value="Padre Alegre"/></div>
-                        <div><span style={{fontFamily:"Nunito, serif", fontSize:"0.8em"}}>Contacto:</span><input value="soycremacorazon@hotmail.com"/></div>
+                        <input readOnly style={{fontFamily:"Nunito, serif", fontSize:"1em", marginLeft:"20px"}} value="Alegre Jesus Ninaquiste"/>
+                        <div><span style={{fontFamily:"Nunito, serif", fontSize:"0.8em"}}>Código:</span><input readOnly value="i20236969"/></div>
+                        <div><span style={{fontFamily:"Nunito, serif", fontSize:"0.8em"}}>DNI:</span><input readOnly value="12345678"/></div>
+                        <div><span style={{fontFamily:"Nunito, serif", fontSize:"0.8em"}}>Nivel:</span><input readOnly value="Primaria"/></div>
+                        <div><span style={{fontFamily:"Nunito, serif", fontSize:"0.8em"}}>Grado:</span><input readOnly value="3ro"/></div>
+                        <div><span style={{fontFamily:"Nunito, serif", fontSize:"0.8em"}}>Sección:</span><input readOnly value="C"/></div>
+                        <div><span style={{fontFamily:"Nunito, serif", fontSize:"0.8em"}}>Apoderado:</span><input readOnly value="Padre Alegre"/></div>
+                        <div><span style={{fontFamily:"Nunito, serif", fontSize:"0.8em"}}>Contacto:</span><input readOnly value="soycremacorazon@hotmail.com"/></div>
                         <div className="af-actions">
-                           <button className="af-button af-edit"  onClick={()=>setEditarAlumno(true)}>Guardar</button>
+                           <button className="af-button af-edit"  onClick={()=>setEditarAlumno(false)}>Guardar</button>
                            <button className="af-button af-close" onClick={()=>setAlumnoInfo(false)}>Cerrar</button>
                         </div>
                        </div>
                       )
                       :(
                         <div className="af-info">
-                          <h2>Jesus Alegre Ninaquispe</h2>
+                          <h2>Santos Medina Santos</h2>
                           <p><strong>Código:</strong> i20236969</p>
                           <p><strong>DNI:</strong> 12345678</p>
                           <p><strong>Nivel:</strong> Primaria</p>
@@ -298,7 +297,7 @@ const EstaSeccion = () => {
                           <p><strong>Apoderado:</strong> Padre Alegre</p>
                           <p><strong>Contacto:</strong> soycremacorazon@hotmail.com</p>
                           <div className="af-actions">
-                             <button className="af-button af-edit"  onClick={()=>setEditarAlumno(false)}>Editar</button>
+                             <button className="af-button af-edit"  onClick={()=>setEditarAlumno(true)}>Editar</button>
                              <button className="af-button af-close" onClick={()=>setAlumnoInfo(false)}>Cerrar</button>
                           </div>
                          </div>

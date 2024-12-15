@@ -181,12 +181,12 @@
   font-weight: 500;
 }
 
-/* Botones */
+
 .af-actions {
-  margin-top: 15px; /* Espaciado superior */
+  margin-top: 15px;
   display: flex;
-  justify-content: flex-end; /* Alinea los botones a la derecha */
-  gap: 10px; /* Espaciado entre los botones */
+  justify-content: flex-end;
+  gap: 10px;
 }
 
 .af-button {
