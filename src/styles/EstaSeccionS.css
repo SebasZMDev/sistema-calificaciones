@@ -43,6 +43,7 @@
     border: 1px solid #ddd;
     padding: 10px;
     text-align: center;
+    cursor: pointer;
   }
   
   .custom-table tr:nth-child(even) {
@@ -80,3 +81,194 @@
     background-color: #218838;
   }
   
+
+
+  /* General Container */
+.af-general-container {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+/* Background Overlay */
+.af-background {
+  position: absolute;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  filter: opacity(70%);
+}
+
+/* Main Container */
+.af-container {
+  position: relative;
+  top: 25%;
+  left: 50%;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 20px;
+  align-items: flex-start; /* Alinea la imagen con el texto al inicio */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transform: translateX(-50%);
+  max-width: 600px;
+  width: 70%;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Foto del Alumno */
+.af-foto {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 3px solid #e0e0e0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.af-info input {
+  border-radius: 5px;
+  margin-left: 5px;
+  border: 1px solid gray;
+  background-color: #eee;
+  font-family: "Nunito", serif;
+  font-size: 0.7em;
+}
+
+.af-foto:hover {
+  border-color: #007BFF;
+}
+
+/* Información */
+.af-info {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* Organiza los elementos en columna */
+  gap: 10px; /* Espaciado entre los elementos */
+}
+
+/* Títulos y Párrafos */
+.af-info h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  font-family: "Nunito", serif;
+}
+
+.af-info h2:hover {
+  color: #007BFF;
+}
+
+.af-info p {
+  margin: 0;
+  font-size: 0.7rem;
+  color: #555;
+  line-height: 1.6;
+  font-family: "Nunito", serif;
+}
+
+.af-info p strong {
+  color: #333;
+  font-weight: 500;
+}
+
+/* Botones */
+.af-actions {
+  margin-top: 15px; /* Espaciado superior */
+  display: flex;
+  justify-content: flex-end; /* Alinea los botones a la derecha */
+  gap: 10px; /* Espaciado entre los botones */
+}
+
+.af-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.af-edit {
+  background-color: #007BFF;
+  color: white;
+}
+
+.af-edit:hover {
+  background-color: #0056b3;
+}
+
+.af-close {
+  background-color: #dc3545;
+  color: white;
+}
+
+.af-close:hover {
+  background-color: #a71d2a;
+}
+
+
+.af-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.af-student-name {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.af-grade-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.af-grade-table th, .af-grade-table td {
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 8px;
+}
+
+.af-grade-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.af-grade-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.af-grade-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+
+.lib-container {
+  position: relative;
+  top: 25%;
+  left: 50%;
+  background-color: #fff;
+  display: grid;
+  gap: 20px;
+  align-items: flex-start; /* Alinea la imagen con el texto al inicio */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transform: translateX(-50%);
+  max-width: 600px;
+  width: 70%;
+  transition: all 0.3s ease-in-out;
+}
